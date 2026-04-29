@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadMe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">README</div>
+            <nav class="nav">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Contact</a>
+            </nav>
+            <button id="new-post-btn" class="btn primary-btn">New Post</button>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="hero">
+                <h1 class="hero-title">Share your thoughts with the world</h1>
+                <p class="hero-subtitle">A simple, clean blogging platform that keeps your words front and center.</p>
+            </section>
+
+            <div class="content">
+                <div class="search-container">
+                    <input type="text" id="search-bar" placeholder="Search posts...">
+                    <button id="search-button">Search</button>
+                </div>
+                
+                <div class="category-button">
+                    <button id="category-btn">Categories</button>
+                    <div id="category-dropdown" class="category-dropdown">
+                        <a href="#" data-category="all">All Posts</a>
+                        <a href="#" data-category="tech">Tech</a>
+                        <a href="#" data-category="travel">Travel</a>
+                        <a href="#" data-category="food">Food</a>
+                        <a href="#" data-category="lifestyle">Lifestyle</a>
+                    </div>
+                </div>
+                
+                <section class="posts-section">
+                    <h2 class="section-title">Latest Posts</h2>
+                    <div id="posts-container" class="posts-grid">
+                        <!-- Posts will be dynamically inserted here -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="post-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Create New Post</h2>
+            <form id="post-form">
+                <div class="form-group">
+                    <label for="post-title">Title</label>
+                    <input type="text" id="post-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="post-author">Author</label>
+                    <input type="text" id="post-author" required>
+                </div>
+                <div class="form-group">
+                    <label for="post-category">Category</label>
+                    <select id="post-category" required>
+                        <option value="tech">Tech</option>
+                        <option value="travel">Travel</option>
+                        <option value="food">Food</option>
+                        <option value="lifestyle">Lifestyle</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="post-content">Content</label>
+                    <textarea id="post-content" rows="10" required></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn">Publish</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ReadMe. All rights reserved.</p>
+        </div>
+    </footer>
+<!-- update -->
+<!-- update -->
+    <script src="script.js"></script>
+</body>
+</html>
